@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/violetforest/Dev/BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/violetforest/.gradle/caches/transforms-2/files-2.1/174040bdd791a06ad94196020082fff5/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/violetforest/.gradle/caches/transforms-2/files-2.1/76e8ed59ec48a93434b866b9295d9600/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}
