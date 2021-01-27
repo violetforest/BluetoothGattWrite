@@ -1,9 +1,8 @@
 
-Android BluetoothLeGatt Sample
+Android BluetoothLeGatt Write Sample
 ===================================
 
-This sample demonstrates how to use the Bluetooth LE Generic Attribute Profile (GATT)
-to transmit arbitrary data between devices.
+This sample demonstrates how to use write a value to a characteristic.
 
 Introduction
 ------------
