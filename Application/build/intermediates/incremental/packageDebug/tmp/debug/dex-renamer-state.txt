@@ -1,4 +1,4 @@
-#Thu Jan 28 15:52:31 CET 2021
+#Thu Jan 28 15:56:19 CET 2021
 base.0=/Users/violetforest/Dev/BluetoothLeGatt/Application/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
