@@ -239,10 +239,7 @@ public class DeviceScanActivity extends ListActivity {
             if (handName.equalsIgnoreCase(deviceName)) {
                 if (deviceName != null && deviceName.length() > 0)
                     viewHolder.deviceName.setText(deviceName);
-                else
-                    viewHolder.deviceName.setText(R.string.unknown_device);
                 viewHolder.deviceAddress.setText(device.getAddress());
-
             }
             return view;
         }
