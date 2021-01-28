@@ -111,10 +111,6 @@ public class DeviceControlActivity extends Activity {
         }
     };
 
-    // If a given GATT characteristic is selected, check for supported features.  This sample
-    // demonstrates 'Read' and 'Notify' features.  See
-    // http://d.android.com/reference/android/bluetooth/BluetoothGatt.html for the complete
-    // list of supported characteristic features.
     private final ExpandableListView.OnChildClickListener servicesListClickListner =
             new ExpandableListView.OnChildClickListener() {
                 @Override
@@ -241,16 +237,20 @@ public class DeviceControlActivity extends Activity {
         ArrayList<ArrayList<HashMap<String, String>>> gattCharacteristicData
                 = new ArrayList<ArrayList<HashMap<String, String>>>();
         mGattCharacteristics = new ArrayList<ArrayList<BluetoothGattCharacteristic>>();
+
         // Loops through available GATT Services.
         for (BluetoothGattService gattService : gattServices) {
             HashMap<String, String> currentServiceData = new HashMap<String, String>();
             uuid = gattService.getUuid().toString();
 
-            Log.w(TAG, "uuidGattServiceasdfd " + uuid);
+            if (SampleGattAttributes.HEART_RATE_MEASUREMENT.equalsIgnoreCase(uuid)) {
+                currentServiceData.put(
+                        LIST_NAME, SampleGattAttributes.lookup(uuid, unknownServiceString));
+                currentServiceData.put(LIST_UUID, uuid);
 
-            currentServiceData.put(
-                    LIST_NAME, SampleGattAttributes.lookup(uuid, unknownServiceString));
-            currentServiceData.put(LIST_UUID, uuid);
+                Log.w(TAG, "uuidGattServicedjafsdfsdfd " + uuid);
+            }
+
             gattServiceData.add(currentServiceData);
 
             ArrayList<HashMap<String, String>> gattCharacteristicGroupData =
@@ -266,11 +266,13 @@ public class DeviceControlActivity extends Activity {
                 HashMap<String, String> currentCharaData = new HashMap<String, String>();
                 uuid = gattCharacteristic.getUuid().toString();
 
-                Log.w(TAG, "uuidGattCharacteristicalsdjafsdfsdfd " + uuid);
+                if (SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG.equalsIgnoreCase(uuid)) {
+                    currentCharaData.put(
+                            LIST_NAME, SampleGattAttributes.lookup(uuid, unknownCharaString));
+                    currentCharaData.put(LIST_UUID, uuid);
 
-                currentCharaData.put(
-                        LIST_NAME, SampleGattAttributes.lookup(uuid, unknownCharaString));
-                currentCharaData.put(LIST_UUID, uuid);
+                    Log.w(TAG, "uuidGattCharacteristicalsdjafsdfsdfd " + uuid);
+                }
                 gattCharacteristicGroupData.add(currentCharaData);
             }
             mGattCharacteristics.add(charas);
