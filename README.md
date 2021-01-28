@@ -2,7 +2,7 @@
 Android BluetoothLeGatt Write Sample
 ===================================
 
-This sample demonstrates how to use write a value to a characteristic.
+This sample demonstrates how to use write a value to a characteristic when you click on the characteristic in the list.
 
 Introduction
 ------------
